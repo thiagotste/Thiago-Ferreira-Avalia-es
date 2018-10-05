@@ -30,31 +30,36 @@ apple-mobile-web-app-status-bar-style para desterminar o estilo da barra de esta
 cor de fundo preta. 
 
 ### f) Está aplicação pode ser considerada um PWA? Em caso negativo, explique o que falta para que seja.
-R:
+R: Não. Faltam componentes que permitam a ele de tanto ter o comportmanto de um aplicativo desktop como aplicativo mobile.
 
 
 ## Angular Questão 4:
 
 ### a) Para que serve o método ngOnInit, quais são os outros métodos do Angular lifecycle hooks e para que servem?
-R:
+R: ngOnInit é chamado após o angular atribuir os valores iniciais das prorpiedades de entrada. Pode ser usada para inicializar alguma variável ao carregar uma página.
+ngOnChanges, ngDoCheck, ngAfterContentInit, ngAfterContentChecked, ngOnDestroy.
 
 ### b) Neste projeto, estamos usando os componentes gráficos da versão 4 da biblioteca gráfica do Ionic. Nesta versão, os componentes são Web Components. Explique o que são Web Components e explique quais são as vantagens deles.
-R: 
+R: Web Components são um conjunto de plataforma web que permite que o criar personalizado e encapsulado tags HMTL para usar nas páginas web
+A vantagem é reutilizar os códogos o tanto que possível.
 
 ### c) Para que serve a tag ngFor do angular?
-R:
+R: Repete uma seção do conteúdo para cada objeto em uma sequência de objetos. Equivale ao foreach loop.
 
 
 ### d) O que o codigo abaixo representa no arquivo list.page.ts?
 `legends: Array<string> = []`
-R
+R Representa a inicialização do array legends do tipo string. 
 
 ### e) Como funciona a api Events do Ionic? Para que serve?
 R: 
 
 ### f) O que é flexbox? Para que servem as tags ion-grid, ion-row, ion-col? Quais as vantagens em utilizálas?
-R: 
-
+R: É um novo modo de layout em CSS3. É similar ao layout em bloco (block), exceto que ele não tem muitas das propriedades que podem ser usadas num layout em bloco, como floats e columns.
+Porém é mais flexível por distribuir espaço e alinhar conteúdo em formas que aplicações web e páginas web complexas geralmente precisam.
+ion-grid é um reponsível sistema que para rearrajnar as colunas dependendo do tamanho da tela.
+ion-row serve para indicar uma coluna do sistema grid e é onde ficam as colunas.
+ion-row são componentes na forma de celulas e ficam dentro de colunas.
 ## Angular Questão 6:
 
 ### a) Quais foram os problemas que você identificou?

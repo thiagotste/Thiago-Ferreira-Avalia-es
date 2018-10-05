@@ -7,14 +7,9 @@ import {legends} from '../names/nameslist';
   styleUrls: ['list.page.scss']
 })
 export class ListPage {
-  private legends: Array<string> = [];
-  constructor() {
-    this.legends = legends;
-  }
+  legends: Array<string> = [];  
 
-  ngOnInit() {}
-
-  public getNames(): String[] {
-    return this.legends;
-  }
+  ngOnInit(){
+	  this.legends = legends;
+  }  
 }
