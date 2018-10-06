@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, PipeTransform } from '@angular/core';
 import { legends } from '../names/nameslist';
 
 @Component({
@@ -6,7 +6,7 @@ import { legends } from '../names/nameslist';
   templateUrl: 'search.page.html',
   styleUrls: ['search.page.scss']
 })
-export class SearchPage {
+export class SearchPage implements PipeTransform {
   legends: Array<string> = [];
   searchInput: string;
   results = [];
@@ -16,9 +16,17 @@ export class SearchPage {
   }
 
   onSearch() {
-    console.log(`Search: ${this.searchInput}`);
-    this.legends.includes(this.searchInput);
-    console.log(this.legends.includes(this.searchInput));
+    this.results = this.transform(this.legends, this.searchInput);
   }
+  clearShow() {
+    this.results = [];
+  }
+  transform(items: any[], searchText: string): any[] {
+    if (!items || searchText === " " || !searchText) { return []; }
 
+    searchText = searchText.toLowerCase();
+    return items.filter(it => {
+      return it.toLowerCase().includes(searchText);
+    });
+  }
 }

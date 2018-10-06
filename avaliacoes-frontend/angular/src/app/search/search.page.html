@@ -3,19 +3,17 @@
     <ion-buttons slot="end">
 
     </ion-buttons>
-    <ion-searchbar 
-      color="danger" 
-      mode="ios" 
-      placeholder="Search for a legend"
-      animated 
-      (ionInput)="onSearch($event)"
-      (ionClear)="searchInput = '';"
-      [(ngModel)]="searchInput">
-
+    <ion-searchbar color="danger" mode="ios" placeholder="Search for a legend" animated (ionInput)="onSearch($event)"
+      (ionClear)="searchInput = ''; clearShow()" [(ngModel)]="searchInput">
     </ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-  <p>Showing <b>{{results.length}}</b> Results for: <b>{{searchInput}}</b></p><br />
+  <p>Showing <b *ngIf="searchInput"> {{results.length}}</b> <b *ngIf="!searchInput"> 0</b> Results for: <b>{{searchInput}}</b></p><br />
+  <ion-item lines="full" [hidden]="!searchInput" *ngFor="let item of results">
+    <ion-label>
+      {{item}}
+    </ion-label>
+  </ion-item>
 </ion-content>
