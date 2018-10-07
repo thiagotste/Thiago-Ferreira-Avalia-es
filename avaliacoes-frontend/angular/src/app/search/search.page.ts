@@ -1,5 +1,5 @@
 import { Component, PipeTransform } from '@angular/core';
-import { legends } from '../names/nameslist';
+import { NameListService } from '../names/nameslist.service';
 
 @Component({
   selector: 'app-search',
@@ -11,8 +11,10 @@ export class SearchPage implements PipeTransform {
   searchInput: string;
   results = [];
 
+  constructor(private nameList: NameListService) { }
+
   ngOnInit() {
-    this.legends = legends;
+    this.legends = this.nameList.listOut;
   }
 
   onSearch() {

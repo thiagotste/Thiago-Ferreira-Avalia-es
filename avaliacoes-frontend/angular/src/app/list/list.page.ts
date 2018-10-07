@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { legends } from '../names/nameslist';
+import { NameListService } from '../names/nameslist.service';
 
 @Component({
   selector: 'app-list',
@@ -9,7 +9,9 @@ import { legends } from '../names/nameslist';
 export class ListPage {
   legends: Array<string> = [];
 
+  constructor(private nameList: NameListService) { }
+
   ngOnInit() {
-    this.legends = legends;
+    this.legends = this.nameList.listOut;
   }
 }

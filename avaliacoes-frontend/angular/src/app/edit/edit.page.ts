@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { legends } from '../names/nameslist';
+import { NameListService } from '../names/nameslist.service';
 
 @Component({
   selector: 'app-edit',
@@ -12,8 +12,8 @@ export class EditPage {
   name: String;
   nameEdited: String;
 
-  constructor() {
-    this.legends = legends;
+  constructor(private nameList: NameListService) {
+    this.legends = nameList.listOut;
     this.isEditing = false;
   }
 
@@ -26,7 +26,8 @@ export class EditPage {
 
   save(itemEdited: string, item: string): void {
     let index = this.legends.indexOf(item);
-    legends.splice(index, 1, itemEdited);
+    this.legends.splice(index, 1, itemEdited);
+    this.nameList.listIn = this.legends;
   }
 
   closeSave() {
