@@ -16,8 +16,8 @@
             <ion-label>
               <span *ngIf="item !== name">{{item}} </span>
             </ion-label>
-            <p></p>
-            <ion-input placeholder="Text Input" *ngIf="item === name" [(ngModel)]="nameEdited"></ion-input>
+            
+            <ion-input placeholder="Text Input" color="primary" *ngIf="item === name" [(ngModel)]="nameEdited"></ion-input>
             <ion-icon name="close" *ngIf="item === name" (click)="closeSave()"></ion-icon>
             <ion-button size="small" color="primary" *ngIf="item === name" (click)="save(nameEdited, item)">Save</ion-button>
             <ion-button size="small" color="primary" [hidden]="item === name" (click)="edit(item)">Edit</ion-button>
