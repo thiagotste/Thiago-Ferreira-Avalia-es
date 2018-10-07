@@ -60,6 +60,7 @@ Porém é mais flexível por distribuir espaço e alinhar conteúdo em formas qu
 ion-grid é um reponsível sistema que para rearrajnar as colunas dependendo do tamanho da tela.
 ion-row serve para indicar uma coluna do sistema grid e é onde ficam as colunas.
 ion-row são componentes na forma de celulas e ficam dentro de colunas.
+
 ## Angular Questão 6:
 
 ### a) Quais foram os problemas que você identificou?
@@ -72,7 +73,7 @@ R:
 R: 
 
 ### d) Para que servem os comandos async e await, encontrados na função presentLoading do arquivo home.page.ts?
-R:
+R: async serve para definir que uma função é assicrona ou seja ela vai retornar uma promise. wait é utilizado para cada processamento assíncrono dentro da função.
 
 ### f) Quais as vantagens de utilizar async/await em códigos javascript/typescript?
 R:
