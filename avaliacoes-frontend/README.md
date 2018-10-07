@@ -76,4 +76,6 @@ R:
 R: async serve para definir que uma função é assicrona ou seja ela vai retornar uma promise. wait é utilizado para cada processamento assíncrono dentro da função.
 
 ### f) Quais as vantagens de utilizar async/await em códigos javascript/typescript?
-R:
+R: Vantagem é que códigos são executados de forma procedural e os erros podem ser capturados utilizando try/catch.
+Por funções async se tornarem promise, é possível utilizar .catch.
+Os códigos ficam mais fáceis de entender.
