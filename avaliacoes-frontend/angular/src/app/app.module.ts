@@ -12,7 +12,8 @@ import {NameListService} from './names/nameslist.service';
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, NameListService
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },    
+     NameListService
   ],
   bootstrap: [AppComponent]
 })

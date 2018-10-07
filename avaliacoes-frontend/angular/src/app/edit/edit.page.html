@@ -16,7 +16,7 @@
           </ion-list-header>          
           <ion-item lines="full" *ngFor="let item of legends">
             <ion-label>
-              <span *ngIf="item !== name">{{item}} </span>
+              <span *ngIf="item !== name">{{item}}</span>              
             </ion-label>
             <ion-input placeholder="Text Input" color="primary" *ngIf="item === name" [(ngModel)]="nameEdited"></ion-input>
             <ion-icon name="close" *ngIf="item === name" (click)="closeSave()"></ion-icon>
